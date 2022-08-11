@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .container {
+        @apply max-w-[1200px] mx-auto
+    }
+    .flexx {
+        @apply flex items-center
+    }
+    .flex__center {
+        @apply flex items-center justify-center
+    }
+    .flex__between {
+        @apply flex items-center justify-between
+    }
+    .flex__end {
+        @apply flex items-center justify-end
+    }
+    .nav__link {
+        @apply mr-[15px] last:mr-0 cursor-pointer
+    }
+    /* BUTTON */
+    .btn {
+        @apply py-[6px] px-[15px] border-none outline-none rounded-sm cursor-pointer bg-blue-400 hover:bg-blue-500 transition duration-300 text-white
+    }
+    .btn__primary {
+        @apply bg-pink-500 hover:bg-pink-600
+    }
+    .btn__success {
+        @apply bg-green-400 hover:bg-green-500
+    }
+    .btn__danger {
+        @apply bg-red-400 hover:bg-red-500
+    }
+    .btn__warning {
+        @apply bg-orange-400 hover:bg-orange-500
+    }
+    .btn__secondary {
+        @apply bg-gray-500 hover:bg-gray-600
+    }
+    /* INPUT */
+    .input__control {
+        @apply flex flex-col mb-4
+    }
+    .input__control label {
+        @apply mb-1 text-gray-700
+    }
+    .input__control input, select, textarea {
+        @apply py-[7px] px-[15px] rounded-md border border-gray-200 outline-none
+    }
+    .input__error {
+        @apply text-red-500
+    }
+    .Pending {
+        @apply text-gray-500
+    }
+    .Cancelled {
+        @apply text-red-500
+    }
+    .Ordered {
+        @apply text-blue-400
+    }
+    .Packed {
+        @apply text-blue-600
+    }
+    .Shipped {
+        @apply text-orange-500
+    }
+    .Delivered {
+        @apply text-green-500
+    }
+    .filter__box {
+        @apply flexx text-[#444] border border-gray-100 rounded-sm px-4 w-max cursor-pointer md:mr-2 text-sm md:text-base mb-[10px]
+    }
+}
+
+@layer utilities {
+    .animation-delay-loading {
+        animation-delay: -0.5s;
+    }
+}
