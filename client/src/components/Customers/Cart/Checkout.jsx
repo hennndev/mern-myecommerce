@@ -96,7 +96,7 @@ const Checkout = () => {
             <div className='flex flex-col space-y-2 pt-[30px]'>
                 <div className="flex__between">
                     <p>Subtotal: </p>
-                    <p className='text-pink-500 font-medium tracking-wide'>${totalPrice}</p>
+                    <p className='text-pink-500 font-medium tracking-wide'>${totalPrice.toFixed(2)}</p>
                 </div>
                 <div className="flex__between">
                     <p>Tax: </p>
