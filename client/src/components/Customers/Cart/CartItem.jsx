@@ -39,7 +39,7 @@ const CartItem = ({item, handleAddCount, handleRemoveCount, handleDelete}) => {
                         <p className={`${item.productDiscount === 0 ? 'font-medium text-pink-500 md:text-lg' : 'font-medium line-through text-gray-500 text-sm'}`}>${item.productPrice}</p>
                         {item.productDiscount !== 0 && (
                             <p className='font-medium text-pink-500 md:text-lg'>
-                                ${((100 - item.productDiscount)/100) * item.productPrice}
+                                ${(((100 - item.productDiscount)/100) * item.productPrice).toFixed(2)}
                             </p>
                         )}
                     </div>

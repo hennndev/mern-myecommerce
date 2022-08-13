@@ -104,7 +104,7 @@ const Checkout = () => {
                 </div>
                 <div className="flex__between">
                     <p>Total: </p>
-                    <p className='text-pink-500 text-lg font-bold tracking-wide'>${totalPrice}</p>
+                    <p className='text-pink-500 text-lg font-bold tracking-wide'>${totalPrice.toFixed(2)}</p>
                 </div>
             </div>
             <div className="flexx space-x-3 mt-3">
