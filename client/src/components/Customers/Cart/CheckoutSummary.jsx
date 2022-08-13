@@ -17,7 +17,7 @@ const CheckoutSummary = ({isCheckoutSummary, totalProducts, totalPrice, dataProd
     useEffect(() => {
         if(stripeToken) {
             setIsLoading(true)
-            fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/payment`, {
+            fetch(`/api/v1/payment`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -51,7 +51,7 @@ const CheckoutSummary = ({isCheckoutSummary, totalProducts, totalPrice, dataProd
     }
     const fetchingOrder = (isStripe = null) => {
         const { paymentMethod, orderUserId, ...orderInfo } = isCheckoutSummary
-        fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/orders/${orderUserId}`, {
+        fetch(`/api/v1/orders/${orderUserId}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

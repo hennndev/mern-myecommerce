@@ -29,7 +29,7 @@ const FilteringProducts = ({products, setProducts, setProductsCount, setIsLoadin
             })
         setIsLoading(true)
         setIsModal(false)
-        fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/products${queries}`).then(res => res.json()).then((res) => {
+        fetch(`/api/v1/products${queries}`).then(res => res.json()).then((res) => {
             setIsLoading(false)
             const data = res.data.filter(itemData => itemData.isFeatured).map(itemData => ({...itemData, count: 1}))
             setProducts(data)

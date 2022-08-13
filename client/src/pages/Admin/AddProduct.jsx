@@ -42,7 +42,7 @@ const AddProduct = () => {
                             method: 'POST',
                             body: formDataImage
                         }).then(res => res.json()).then((image) => {
-                            fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/products`, {
+                            fetch(`/api/v1/products`, {
                                 method: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json'

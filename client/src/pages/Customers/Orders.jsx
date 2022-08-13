@@ -39,7 +39,7 @@ const Orders = () => {
             }).then((result) => {
                 if(result.isConfirmed) {
                     setIsLoading(true)
-                    fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/orders/${order._id}`, {
+                    fetch(`/api/v1/orders/${order._id}`, {
                         method: 'PUT',
                         headers: {
                             'Content-Type': 'application/json'
@@ -81,7 +81,7 @@ const Orders = () => {
             }).then((result) => {
                 if(result.isConfirmed) {
                     setIsLoading(true)
-                    fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/users/${userLogin?.id}`, {
+                    fetch(`/api/v1/users/${userLogin?.id}`, {
                         method: 'PUT',
                         headers: {
                             'Content-Type': 'application/json'

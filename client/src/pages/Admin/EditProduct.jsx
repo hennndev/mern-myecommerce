@@ -40,7 +40,7 @@ const EditProduct = () => {
                     if(result.isConfirmed) {
                         setIsLoading(true)                 
                         if(values.productImage.productImageURL) {
-                            fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/products/${productDataTemp._id}`, {
+                            fetch(`/api/v1/products/${productDataTemp._id}`, {
                                 method: 'PUT',
                                 headers: {
                                     'Content-Type': 'application/json'
@@ -73,7 +73,7 @@ const EditProduct = () => {
                                 method: 'POST',
                                 body: formDataImage
                             }).then(res => res.json()).then((image) => {
-                                fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/products/${productDataTemp._id}`, {
+                                fetch(`/api/v1/products/${productDataTemp._id}`, {
                                     method: 'PUT',
                                     headers: {
                                         'Content-Type': 'application/json'

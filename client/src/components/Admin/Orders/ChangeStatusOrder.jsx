@@ -20,7 +20,7 @@ const ChangeStatusOrder = ({isModal, setIsModal, setIsLoading}) => {
             }).then((result) => {
                 if(result.isConfirmed) {
                     setIsLoading(true)
-                    fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/orders/${isModal.id}`, {
+                    fetch(`/api/v1/orders/${isModal.id}`, {
                         method: 'PUT',
                         headers: {
                             'Content-Type': 'application/json'

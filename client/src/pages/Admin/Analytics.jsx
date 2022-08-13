@@ -64,7 +64,7 @@ const Analytics = () => {
 
     useEffect(() => {
         setIsLoading(true)
-        fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/orders`).then(res => res.json()).then((data) => {
+        fetch(`/api/v1/orders`).then(res => res.json()).then((data) => {
             setIsLoading(false)
             setDataOrders(data.data.filter(data => new Date(data.createdAt).getFullYear() === year))
         }).catch(() => {

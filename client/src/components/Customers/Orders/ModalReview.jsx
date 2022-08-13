@@ -26,7 +26,7 @@ const ModalReview = ({isLoading, setIsLoading, isReview, handleCancel}) => {
                     if(result.isConfirmed) {
                         setIsLoading(true)
                         const { id, ...reviewData} = isReview
-                        fetch(`http://localhost:5000/api/v1/products/${id}/reviews`, {
+                        fetch(`/api/v1/products/${id}/reviews`, {
                             method: 'PUT',
                             headers: {
                                 'Content-Type': 'application/json'

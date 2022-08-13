@@ -42,7 +42,7 @@ const App = () => {
     useEffect(() => {
         if(cookies?.userLogin) {
             const user = jwt_decode(cookies?.userLogin)
-            fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/users/${user?.id}`).then(res => res.json()).then(res => {
+            fetch(`/api/v1/users/${user?.id}`).then(res => res.json()).then(res => {
                 const { _id, email, username, profileImage, country, address, telpNumber, postCode, ...userData } = res.data
                 saveCurrentUser({
                     id: _id,

@@ -24,7 +24,7 @@ const Register = () => {
             const {passwordConfirmation, ...valuesData} = values
             setIsLoading(true)
             try {
-                const res = await fetch(`${process.env.REACT_APP_BASE_URL}/users/signup`, {
+                const res = await fetch(`/users/signup`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

@@ -23,7 +23,7 @@ const Products = () => {
 
     useEffect(() => {
         setIsLoading(true)
-        fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/products`).then(res => res.json()).then(res => {
+        fetch(`/api/v1/products`).then(res => res.json()).then(res => {
             const data = res.data
             setIsLoading(false)
             setProducts(data)
@@ -52,7 +52,7 @@ const Products = () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 setIsLoading(true)
-                fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/products/${product._id}/${product.productImage.productImageID}`, {
+                fetch(`/api/v1/products/${product._id}/${product.productImage.productImageID}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json'
@@ -82,7 +82,7 @@ const Products = () => {
         }).then((result) => {
             if(result.isConfirmed) {
                 setIsLoading(true)
-                fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/products/${product._id}`, {
+                fetch(`/api/v1/products/${product._id}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'

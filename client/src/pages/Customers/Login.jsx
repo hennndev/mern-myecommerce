@@ -23,7 +23,7 @@ const Login = () => {
         onSubmit: async (values, { resetForm }) => {
             setIsLoading(true)
             try {
-                const res = await fetch(`${process.env.REACT_APP_BASE_URL}/users/signin`, {
+                const res = await fetch(`/users/signin`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

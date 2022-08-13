@@ -16,8 +16,8 @@ const Dashboard = () => {
     useEffect(() => {
         setIsLoading(true)
         Promise.all([
-            fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/orders`),
-            fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/users`)
+            fetch(`/api/v1/orders`),
+            fetch(`/api/v1/users`)
         ]).then((res) => Promise.all(res.map(r => r.json()))).then(data => {
             setIsLoading(false)
             const ordersData = data[0].data.filter(data => new Date(data.createdAt).getFullYear() === new Date().   getFullYear())

@@ -27,7 +27,7 @@ const Orders = () => {
 
     useEffect(() => {
         setIsLoading(true)
-        fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/orders`).then(res => res.json()).then(res => {
+        fetch(`/api/v1/orders`).then(res => res.json()).then(res => {
             const data = res.data
             setIsLoading(false)
             setOrders(data)
@@ -56,7 +56,7 @@ const Orders = () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 setIsLoading(true)
-                fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/orders/${orderId}`, {
+                fetch(`/api/v1/orders/${orderId}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json'

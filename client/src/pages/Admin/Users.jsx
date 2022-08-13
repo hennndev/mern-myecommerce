@@ -21,7 +21,7 @@ const Users = () => {
 
     useEffect(() => {
         setIsLoading(true)
-        fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/users`).then(res => res.json()).then(res => {
+        fetch(`/api/v1/users`).then(res => res.json()).then(res => {
             setIsLoading(false)
             setUsers(res.data.filter(user => user.email !== 'admin@admin.com'))
         }).catch(err => {

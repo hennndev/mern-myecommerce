@@ -20,7 +20,7 @@ const OrderHistoryDetail = () => {
     const getOrder = async() => {
         setIsLoading(true)
         try {
-            const req = await fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/orders/${orderId}`)
+            const req = await fetch(`/api/v1/orders/${orderId}`)
             const res = await req.json()
             if(res) {
                 const data = res.data

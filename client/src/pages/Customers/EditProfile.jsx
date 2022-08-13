@@ -43,7 +43,7 @@ const EditProfile = () => {
                                 method: 'POST',
                                 body: formDataImage
                             }).then(res => res.json()).then(image => {
-                                fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/users/${userLogin.id}`, {
+                                fetch(`/api/v1/users/${userLogin.id}`, {
                                     method: 'PUT',
                                     headers: {
                                         'Content-Type': 'application/json'
@@ -75,7 +75,7 @@ const EditProfile = () => {
                                 })
                             })
                         } else {
-                            fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/users/${userLogin.id}`, {
+                            fetch(`/api/v1/users/${userLogin.id}`, {
                                 method: 'PUT',
                                 headers: {
                                     'Content-Type': 'application/json'

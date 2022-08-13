@@ -35,8 +35,6 @@ const AdminNavbar = () => {
         title = 'Orders User'
     }
 
-    console.log(titlePage)
-
     return (
         <header className='flex__between py-3 px-5 w-full shadow-md sticky top-0 bg-white z-10'>
             <div className="flexx space-x-3 text-[#444]">

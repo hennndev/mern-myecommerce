@@ -21,7 +21,7 @@ const OrdersUser = () => {
 
     useEffect(() => {
         setIsLoading(true)
-        fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/users/${userId}`).then(res => res.json()).then(res => {
+        fetch(`/api/v1/users/${userId}`).then(res => res.json()).then(res => {
             setIsLoading(false)
             const data = res.data.ordersHistory
             setUserOrders(data)
