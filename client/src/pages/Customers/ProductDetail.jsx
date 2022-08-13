@@ -19,7 +19,7 @@ const ProductDetail = () => {
     useEffect(() => {
         try {
             setIsLoading(true)
-            fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/products/${productId}`).then(res => res.json()).then(res => {
+            fetch(`https://mernmyecommerce.herokuapp.com/api/v1/products/${productId}`).then(res => res.json()).then(res => {
                 setIsLoading(false)
                 if(!res.data) {
                     navigate('/page-not-found')

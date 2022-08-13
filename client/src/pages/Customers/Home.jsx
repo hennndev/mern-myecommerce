@@ -23,7 +23,7 @@ const Home = () => {
     }, [])
     const fetching = (pageVal) => {
         setIsLoading(true)
-        fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/products?limit=${10 * pageVal}`)
+        fetch(`https://mernmyecommerce.herokuapp.com/api/v1/products?limit=${10 * pageVal}`)
             .then(res => res.json()).then((res) => {
             setIsLoading(false)
             const data = res.data.filter(itemData => itemData.isFeatured).map(itemData => ({...itemData, count: 1}))
