@@ -33,7 +33,7 @@ const Checkout = () => {
 
     const handleOrder = () => {
         setIsLoading(true)
-        fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/products/checkStock`, {
+        fetch(`/api/v1/products/checkStock`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
