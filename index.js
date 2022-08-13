@@ -10,6 +10,13 @@ require('dotenv').config({path: './config/config.env'})
 
 const app = express()
 
+app.use(express.json())
+app.use(cors())
+app.use(productsRoute)
+app.use(usersRoutes)
+app.use(ordersRoutes)
+app.use(paymentRoutes)
+
 if(process.env.NODE_ENV === 'production') {
     app.use(express.static(__dirname + '/client/build'))
     app.get('*', (req, res) => {
@@ -25,11 +32,3 @@ mongoose.connect(process.env.MONGOODB_URI, {
 }).then(() => {
     app.listen(process.env.PORT || 5000, () => console.log('Connected to server'))
 }).catch(() => console.log('Failed connect to database'))
-
-
-app.use(express.json())
-app.use(cors())
-app.use(productsRoute)
-app.use(usersRoutes)
-app.use(ordersRoutes)
-app.use(paymentRoutes)
