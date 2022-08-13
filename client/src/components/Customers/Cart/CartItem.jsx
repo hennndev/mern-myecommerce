@@ -36,7 +36,7 @@ const CartItem = ({item, handleAddCount, handleRemoveCount, handleDelete}) => {
                 </div>
                 <div className='flex items-end justify-between flex-col'>
                     <div className='flex flex-col space-y-1'>
-                        <p className={`${item.productDiscount === 0 ? 'font-medium text-pink-500 md:text-lg' : 'font-medium line-through text-gray-500 text-sm'}`}>${item.productPrice}</p>
+                        <p className={`${item.productDiscount === 0 ? 'font-medium text-pink-500 md:text-lg' : 'font-medium line-through text-gray-500 text-sm'}`}>${item.productPrice.toFixed(2)}</p>
                         {item.productDiscount !== 0 && (
                             <p className='font-medium text-pink-500 md:text-lg'>
                                 ${(((100 - item.productDiscount)/100) * item.productPrice).toFixed(2)}
@@ -44,7 +44,7 @@ const CartItem = ({item, handleAddCount, handleRemoveCount, handleDelete}) => {
                         )}
                     </div>
                     <p className='font-medium text-pink-500 md:text-lg'>Total <br /> 
-                        ${((100 - item.productDiscount)/100 * item.productPrice) * item.count}
+                        ${(((100 - item.productDiscount)/100 * item.productPrice) * item.count).toFixed(2)}
                     </p>
                 </div>
             </div>

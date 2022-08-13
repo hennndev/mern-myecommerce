@@ -109,7 +109,7 @@ const OrdersUser = () => {
                                     <td className='p-3 text-center'>{idx + 1 + ((page - 1) * 10)}</td>
                                     <td className='p-3 text-center whitespace-nowrap'>#{order._id.slice(0, 10)}</td>
                                     <td className='p-3 text-center whitespace-nowrap'>{moment(order.createdAt).format('L')}</td>
-                                    <td className='p-3 text-center whitespace-nowrap text-green-500 font-medium'>${order.orderTotalPrice}</td>
+                                    <td className='p-3 text-center whitespace-nowrap text-green-500 font-medium'>${order.orderTotalPrice.toFixed(2)}</td>
                                     <td className={`p-3 text-center whitespace-nowrap ${order.orderStatus}`}>{order.orderStatus}</td>
                                     <td className='p-3 text-center whitespace-nowrap text-blue-500 underline cursor-pointer' onClick={() => navigate(`/dashboard/orders-history/${order._id}`)}>Order Info</td>
                                 </tr>

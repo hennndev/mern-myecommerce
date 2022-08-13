@@ -195,7 +195,7 @@ const Products = () => {
                                         <img src={product.productImage.productImageURL} alt={product.productName} className="w-[50px] h-[50px] object-contain"/>
                                     </td>
                                     <td className='p-3 text-center whitespace-nowrap'>{product.productName}</td>
-                                    <td className='py-3 px-5 text-center whitespace-nowrap text-green-700 font-medium'>${product.productPrice}</td>
+                                    <td className='py-3 px-5 text-center whitespace-nowrap text-green-700 font-medium'>${product.productPrice.toFixed(2)}</td>
                                     <td className='p-3 text-center whitespace-nowrap'>
                                         <p className='cursor-pointer text-blue-600 font-medium underline' onClick={() => setIsModal(product)}>Product Info</p>
                                     </td>

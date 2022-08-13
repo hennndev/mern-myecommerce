@@ -134,7 +134,7 @@ const EditProduct = () => {
         if(productDataTemp) {
             formik.setValues({
                 productName: productDataTemp.productName,
-                productPrice: productDataTemp.productPrice,
+                productPrice: productDataTemp.productPrice.toFixed(2),
                 productCategory: productDataTemp.productCategory,
                 productCompany: productDataTemp.productCompany,
                 productDescription: productDataTemp.productDescription,

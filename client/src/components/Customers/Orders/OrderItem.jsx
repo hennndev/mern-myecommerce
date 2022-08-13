@@ -11,7 +11,7 @@ const OrderItem = ({order, removeOrder, cancelledOrder, handleReview}) => {
             </div>
             <p>Ordered On: <span className='underline text-pink-500'>{moment(order.createdAt).format('lll')}</span></p>
             <p>Total Products: {order.orderTotalProducts} Products</p>
-            <p className='text-pink-500 font-medium'>Total Price: ${order.orderTotalPrice}</p>
+            <p className='text-pink-500 font-medium'>Total Price: ${order.orderTotalPrice.toFixed(2)}</p>
             <p>Payment Method: {order.paymentMethod}</p>
             <p>Products Ordered: </p>
             {order.orderProducts.map(item => (

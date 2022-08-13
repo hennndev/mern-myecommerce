@@ -176,7 +176,7 @@ const Orders = () => {
                                     <td className='p-3 text-center whitespace-nowrap'>#{order._id.slice(0, 10)}</td>
                                     <td className='p-3 text-center whitespace-nowrap'>{moment(order.createdAt).format('L')}</td>
                                     <td className='p-3 text-center whitespace-nowrap'>{order.orderInfo.name}</td>
-                                    <td className='p-3 text-center whitespace-nowrap text-green-700 font-medium'>${order.orderTotalPrice}</td>
+                                    <td className='p-3 text-center whitespace-nowrap text-green-700 font-medium'>${order.orderTotalPrice.toFixed(2)}</td>
                                     <td className={`p-3 text-center text-[15px] whitespace-nowrap ${order.orderStatus} font-medium`}>{order.orderStatus}</td>
                                     <td className='p-3 text-center whitespace-nowrap'>
                                         <button className='btn btn__primary' onClick={() => navigate(`/dashboard/orders-history/${order._id}`)}>Detail</button>

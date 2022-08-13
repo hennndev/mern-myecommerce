@@ -95,7 +95,7 @@ const Dashboard = () => {
                                 <th className='text-center p-3'>Id</th>
                                 <th className='text-center p-3'>Date</th>
                                 <th className='text-center p-3'>Username</th>
-                                <th className='text-center p-3'>Email</th>
+                                <th className='text-center p-3'>Status</th>
                                 <th className='text-center p-3'>Info Detail</th>
                             </tr>
                         </thead>
@@ -105,13 +105,13 @@ const Dashboard = () => {
                                     <td className='p-3 text-center'>{idx + 1}</td>
                                     <td className='p-3 text-center whitespace-nowrap'>#{order?._id.slice(0, 10)}</td>
                                     <td className='p-3 text-center whitespace-nowrap'>
-                                        {moment(order?.createdAt).format('L')}
+                                        {moment(order?.createdAt).calendar()}
                                     </td>
                                     <td className='p-3 text-center whitespace-nowrap'>
                                         {order?.orderInfo.name}
                                     </td>
-                                    <td className='p-3 text-center whitespace-nowrap'>
-                                        {order?.orderInfo.emailActive}
+                                    <td className={`p-3 text-center whitespace-nowrap ${order.orderStatus}`}>
+                                        {order?.orderStatus}
                                     </td>
                                     <td className='p-3 text-center text-blue-600 underline cursor-pointer whitespace-nowrap' onClick={() => navigate(`/dashboard/orders-history/${order._id}`)}>Orders Detail</td>
                                 </tr>

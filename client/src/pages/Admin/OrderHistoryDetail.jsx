@@ -67,7 +67,7 @@ const OrderHistoryDetail = () => {
                     <p>Order Username: {order?.orderInfo.name}</p>
                     <p>Order User Detail: <span className='text-blue-500 underline cursor-pointer' onClick={() => setIsModal(order)}>User Detail</span></p>
                     <p>Total Products: {order?.orderTotalProducts} Products</p>
-                    <p className='text-pink-500 font-medium'>Total Price: ${order?.orderTotalPrice}</p>
+                    <p className='text-pink-500 font-medium'>Total Price: ${order?.orderTotalPrice.toFixed(2)}</p>
                     <p className=''>Payment Method: {order?.paymentMethod}</p>
                     <p className=''>Products Ordered: </p>
                     {order?.orderProducts.map(item => (
@@ -77,10 +77,10 @@ const OrderHistoryDetail = () => {
                             </div>
                             <div className='flex-[0.6] sm:flex-[0.8]'>
                                 <h1 className='font-medium'>{item.productName}</h1>
-                                <h1 className='text-pink-500 font-medium'>Price: ${item.productPrice}</h1>
+                                <h1 className='text-pink-500 font-medium'>Price: ${item.productPrice.toFixed(2)}</h1>
                                 {item.productDiscount > 0 && <p className='text-[#444]'>Discount: {item.productDiscount}%</p>}
                                 <h1>Quantity: {item.count}x</h1>
-                                <h1 className='text-pink-500 font-medium'>Total: ${item.count * item.productPrice}</h1>
+                                <h1 className='text-pink-500 font-medium'>Total: ${(((100 - item.productDiscount)/100 * item.productPrice) * item.count).toFixed(2)}</h1>
                             </div>
                         </div>
                     ))}

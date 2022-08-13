@@ -30,7 +30,7 @@ const ProductItem = ({product, inCart, handleNavigate, handleAddCart}) => {
                     <h1 className='font-medium text-[13px] sm:text-[15px] line-clamp-1'>{product.productName}</h1>
                     <div className='flexx text-pink-600 font-bold text-[13px] sm:text-lg space-x-1 sm:space-x-2'>
                         <h2 className={`${product.productDiscount !== 0 && 'text-[12px] sm:text-[14px] line-through text-gray-500'}`}>
-                            ${product?.productPrice}
+                            ${product?.productPrice.toFixed(2)}
                         </h2>
                         {product.productDiscount !== 0 && (
                             <h2>

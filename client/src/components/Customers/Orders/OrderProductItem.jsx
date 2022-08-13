@@ -11,15 +11,15 @@ const OrderProductItem = ({item, isDelivered, handleReview}) => {
                     <h1 className='font-medium'>{item.productName}</h1>
                     {item.productDiscount > 0 && <h1 className='font-medium bg-pink-500 text-sm text-white py-1 px-2 rounded-sm absolute top-0 left-0'>Sale {item.productDiscount}%</h1>}
                     <h1 className='font-medium text-pink-500'>Price: {' '}
-                        <span className={`${item.productDiscount > 0 ? 'text-sm text-gray-600 line-through' : 'text-pink-500 text-base'}`}>${item.productPrice}</span> {' '}
+                        <span className={`${item.productDiscount > 0 ? 'text-sm text-gray-600 line-through' : 'text-pink-500 text-base'}`}>${item.productPrice.toFixed(2)}</span> {' '}
                         {item.productDiscount > 0 && 
                             <span>
-                                ${((100 - item.productDiscount)/100) * item.productPrice}
+                                ${(((100 - item.productDiscount)/100) * item.productPrice).toFixed(2)}
                             </span>
                         }                  
                     </h1>
                     <h1>Quantity: {item.count}x</h1>
-                    <h1 className='text-pink-500 font-medium'>Total: ${((100 - item.productDiscount)/100) * (item.productPrice * item.count)}</h1>
+                    <h1 className='text-pink-500 font-medium'>Total: ${(((100 - item.productDiscount)/100) * (item.productPrice * item.count)).toFixed(2)}</h1>
                 </div>
                 {!item?.isReview && isDelivered && (
                     <button className='btn w-max btn__warning text-[13px] md:text-sm md:h-max mt-1 px-[8px] py-[5px]' onClick={handleReview}>Add Review</button>

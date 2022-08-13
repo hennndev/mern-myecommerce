@@ -72,7 +72,7 @@ const ProductDetail = () => {
                             </h1>
                             <div className='flexx font-bold text-2xl mb-2 space-x-3 text-pink-600'>
                                 <h2 className={`${product.productDiscount !== 0 && 'text-xl line-through text-gray-500'}`}>
-                                    ${product?.productPrice}
+                                    ${product?.productPrice.toFixed(2)}
                                 </h2>
                                 {product.productDiscount !== 0 && (
                                     <h2>
