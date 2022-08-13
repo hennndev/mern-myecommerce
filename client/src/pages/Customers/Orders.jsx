@@ -17,7 +17,7 @@ const Orders = () => {
 
     useEffect(() => {
         setIsLoading(true)
-        fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/users/${userLogin.id}`).then(res => res.json()).then((res) => {
+        fetch(`/api/v1/users/${userLogin.id}`).then(res => res.json()).then((res) => {
             const dataOrders = res.data.ordersHistory.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
             setIsLoading(false)
             setOrdersUser(dataOrders)
