@@ -109,7 +109,7 @@ const CheckoutSummary = ({isCheckoutSummary, totalProducts, totalPrice, dataProd
                     <p>Total Products: </p>
                     <p>{totalProducts} Products</p>
                 </div>
-                <div className=''>
+                <div>
                     <p className='mb-1'>Products Ordered: </p>
                     <div className='bg-gray-200 p-4 flex flex-col space-y-2 rounded-sm'>
                         {dataProducts.map((item, idx) => (

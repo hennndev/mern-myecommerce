@@ -10,10 +10,10 @@ import LoadingOverlay from '../../components/Utils/LoadingOverlay'
 
 const Login = () => {
 
-    const [isLoading, setIsLoading] = useState(false)
-    const [visiblePassword, setVisiblePassword] = useState(false)
-    const [cookies, setCookie] = useCookies(['userLogin'])
     const navigate = useNavigate()
+    const [isLoading, setIsLoading] = useState(false)
+    const [cookies, setCookie] = useCookies(['userLogin'])
+    const [visiblePassword, setVisiblePassword] = useState(false)
 
     const formik = useFormik({
         initialValues: {
@@ -58,13 +58,12 @@ const Login = () => {
             <form className='mt-[50px] border border-gray-300 rounded-md p-5 w-[450px]' onSubmit={formik.handleSubmit}>
                 <h2 className='text-center text-2xl mb-5 font-medium'>Login Form</h2>
                 <InputControl 
-                    type="email" 
+                    inputType="email" 
                     id="email" 
                     labelName="Email" 
                     placeholder="your email" 
                     formik={formik}/>
                 <InputControl 
-                    type="password" 
                     id="password" 
                     labelName="Password"  
                     formik={formik}

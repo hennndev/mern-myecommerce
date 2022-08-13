@@ -1,10 +1,9 @@
 import React from 'react'
+import { BiGroup } from 'react-icons/bi'
 import { useNavigate } from 'react-router-dom'
-import { TbTarget } from 'react-icons/tb'
-import { BiGroup, BiTransfer } from 'react-icons/bi'
 import { IoAnalyticsOutline } from 'react-icons/io5'
 import { useData } from '../../../context/appContext'
-import { AiOutlineHome, AiOutlineSetting, AiOutlineClose } from 'react-icons/ai'
+import { AiOutlineHome, AiOutlineClose } from 'react-icons/ai'
 import { MdOutlineStorefront, MdOutlineHistory, MdOutlineLogout } from 'react-icons/md'
 
 const AdminSidebar = () => {

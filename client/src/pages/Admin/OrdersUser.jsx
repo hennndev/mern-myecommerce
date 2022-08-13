@@ -105,7 +105,7 @@ const OrdersUser = () => {
                         </thead>
                         <tbody>
                             {sortingData.length > 0 ? sortingData.slice((page - 1) * 10, (page * 10)).map((order, idx) => (
-                                <tr className={``} key={order._id}>
+                                <tr key={order._id}>
                                     <td className='p-3 text-center'>{idx + 1 + ((page - 1) * 10)}</td>
                                     <td className='p-3 text-center whitespace-nowrap'>#{order._id.slice(0, 10)}</td>
                                     <td className='p-3 text-center whitespace-nowrap'>{moment(order.createdAt).format('L')}</td>

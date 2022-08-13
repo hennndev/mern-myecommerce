@@ -22,7 +22,6 @@
     .nav__link {
         @apply mr-[15px] last:mr-0 cursor-pointer
     }
-    /* BUTTON */
     .btn {
         @apply py-[6px] px-[15px] border-none outline-none rounded-sm cursor-pointer bg-blue-400 hover:bg-blue-500 transition duration-300 text-white
     }
@@ -41,7 +40,6 @@
     .btn__secondary {
         @apply bg-gray-500 hover:bg-gray-600
     }
-    /* INPUT */
     .input__control {
         @apply flex flex-col mb-4
     }
@@ -71,14 +69,5 @@
     }
     .Delivered {
         @apply text-green-500
-    }
-    .filter__box {
-        @apply flexx text-[#444] border border-gray-100 rounded-sm px-4 w-max cursor-pointer md:mr-2 text-sm md:text-base mb-[10px]
-    }
-}
-
-@layer utilities {
-    .animation-delay-loading {
-        animation-delay: -0.5s;
     }
 }

@@ -29,11 +29,13 @@ const AdminNavbar = () => {
 
     let title = 'Order Detail'
 
-    if(/\d/.test(titlePage) && titlePage === 'orders-history') {
+    if(/\d/.test(titlePage) && titlePage[1] === 'orders-history') {
         title = 'Order Detail'
     } else {
         title = 'Orders User'
     }
+
+    console.log(titlePage)
 
     return (
         <header className='flex__between py-3 px-5 w-full shadow-md sticky top-0 bg-white z-10'>
@@ -41,7 +43,7 @@ const AdminNavbar = () => {
                 <MdMenuOpen className='block lg:hidden cursor-pointer text-[25px]' onClick={() => handleOpenSidebar(!openSidebar)}/>
                 <h1 className='text-xl capitalize'>{/\d/.test(titlePage) ? title : titlePage[0].replace('-', ' ')}</h1>
             </div>
-            <ul className='flexx nav__links text-[#444]'>
+            <ul className='flexx text-[#444]'>
                 <MdOutlineAccountCircle className='cursor-pointer text-[20px] mr-[15px]'/>
                 <MdOutlineLightMode className='cursor-pointer text-[20px] mr-[15px]'/>
                 <MdOutlineLogout className='cursor-pointer text-[20px] text-red-500' onClick={handleLogout}/>

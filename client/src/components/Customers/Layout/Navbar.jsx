@@ -21,9 +21,9 @@ const Navbar = () => {
 
     return (
         <>
-            <header className='flex__between container py-4 px-5'>
-                <h1 className='text-xl font-medium text-pink-500' onClick={() => handleRoute('/')}>Agustinaku</h1>
-                <ul className={`hidden md:flexx nav__links`}>
+            <header className='container flex__between py-4 px-5'>
+                <h1 className='text-xl font-medium text-pink-500' onClick={() => handleRoute('/')}>MERN</h1>
+                <ul className='hidden md:flexx'>
                     <Navigations userLogin={userLogin} handleRoute={handleRoute} saveCurrentUser={saveCurrentUser}/>      
                     <MdOutlineLightMode className='cursor-pointer hidden md:block text-lg ml-5 mr-3'/>
                     <div className="relative cursor-pointer" onClick={() => handleRoute('/cart')}>
@@ -45,7 +45,7 @@ const Navbar = () => {
                 </div>
             </header>
             {showSidebar && (
-                <ul className={`flex flex-col space-y-2 md:hidden nav__links container px-5 pt-2`}>
+                <ul className="flex flex-col space-y-2 md:hidden container px-5 pt-2">
                     <Navigations userLogin={userLogin} handleRoute={handleRoute} saveCurrentUser={saveCurrentUser}/>
                 </ul>
             )}

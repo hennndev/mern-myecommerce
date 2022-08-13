@@ -7,7 +7,7 @@ const Review = ({review}) => {
         <div className="flex flex-col border-b border-1-[#ccc] rounded-sm p-3">
             <div className='flex mb-2'>
                 <div className='h-[70px] w-[70px] mr-3'>
-                    <img src={review?.userProfile?.profileImage.profileImageURL || "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"} alt="" className='w-full h-full object-contain'/>
+                    <img src={review?.userProfile?.profileImage.profileImageURL || "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"} alt={review?.username} className='w-full h-full object-contain'/>
                 </div>
                 <div className='flex flex-col text-[#444]'>
                     <h1 className='mb-1'>{review?.username}</h1>

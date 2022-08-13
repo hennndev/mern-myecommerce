@@ -8,7 +8,7 @@ const Profile = () => {
     const { userLogin } = useData()
     
     return (
-        <section className='mt-[50px] container px-5 flex__center'>
+        <section className='container mt-[50px] px-5 flex__center'>
             <div className='shadow-card p-5 w-[500px] rounded-md'>
                 <div className="flex__center flex-col w-full">
                     <div className='h-[100px] w-[100px]'>

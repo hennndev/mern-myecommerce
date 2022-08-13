@@ -8,10 +8,10 @@ import LoadingOverlay from '../../components/Utils/LoadingOverlay'
 
 const Register = () => {
 
+    const navigate = useNavigate()
     const [isLoading, setIsLoading] = useState(false)
     const [visiblePassword, setVisiblePassword] = useState(false)
     const [visiblePasswordConfirmation, setVisiblePasswordConfirmation] = useState(false)
-    const navigate = useNavigate()
 
     const formik = useFormik({
         initialValues: {
@@ -69,20 +69,18 @@ const Register = () => {
                     placeholder='your username'
                     formik={formik}/>
                 <InputControl
-                    type="email"
+                    inputType="email"
                     id="email"
                     labelName="Email"
                     placeholder='your email'
                     formik={formik}/>
                 <InputControl 
-                    type="password" 
                     id="password" 
                     labelName="Password"  
                     formik={formik}
                     isShow={visiblePassword}
                     handleShow={() => setVisiblePassword(!visiblePassword)}/>
                 <InputControl 
-                    type="password" 
                     id="passwordConfirmation" 
                     labelName="Password Confirmation"  
                     formik={formik}

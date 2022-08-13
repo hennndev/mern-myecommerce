@@ -40,22 +40,22 @@ const App = () => {
     const [cookies] = useCookies(['userLogin'])
     const { saveCurrentUser } = useData()
     useEffect(() => {
-      if(cookies?.userLogin) {
-        const user = jwt_decode(cookies?.userLogin)
-        fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/users/${user?.id}`).then(res => res.json()).then(res => {
-            const { _id, email, username, profileImage, country, address, telpNumber, postCode, ...userData } = res.data
-            saveCurrentUser({
-                id: _id,
-                username,
-                email,
-                profileImage,
-                country,
-                address,
-                telpNumber,
-                postCode
+        if(cookies?.userLogin) {
+            const user = jwt_decode(cookies?.userLogin)
+            fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/users/${user?.id}`).then(res => res.json()).then(res => {
+                const { _id, email, username, profileImage, country, address, telpNumber, postCode, ...userData } = res.data
+                saveCurrentUser({
+                    id: _id,
+                    username,
+                    email,
+                    profileImage,
+                    country,
+                    address,
+                    telpNumber,
+                    postCode
+                })
             })
-        })
-      }
+        }
     }, [cookies?.userLogin])
     
 

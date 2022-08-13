@@ -50,12 +50,12 @@ const FilteringProducts = ({products, setProducts, setProductsCount, setIsLoadin
                 maxPrice={products.map(item => item.productPrice).sort((a, b) => a - b)[products.length - 1]}/>
             }
             <div className="flexx flex-wrap mb-[20px]">
-                <div className='filter__box space-x-3 py-[8px] mr-2' 
+                <div className='flexx text-[#444] border border-gray-100 rounded-sm px-4 w-max cursor-pointer md:mr-2 text-sm md:text-base mb-[10px] space-x-3 py-[8px] mr-2' 
                     onClick={() => setIsModal(true)} >
                     <IoFilterOutline className='text-lg md:text-2xl'/>
                     <p>Filter Products</p>
                 </div>
-                <div className='filter__box mr-0'>
+                <div className='flexx text-[#444] border border-gray-100 rounded-sm px-4 w-max cursor-pointer md:mr-2 text-sm md:text-base mb-[10px] mr-0'>
                     {sortName === 'asc' || sortName === '' ? 
                         <BsSortAlphaDown className='text-lg md:text-2xl'/> :
                         <BsSortAlphaDownAlt className='text-lg md:text-2xl'/>
@@ -66,7 +66,7 @@ const FilteringProducts = ({products, setProducts, setProductsCount, setIsLoadin
                         <option value="desc">Z to A</option>
                     </select>
                 </div>
-                <div className='filter__box mr-1'>
+                <div className='flexx text-[#444] border border-gray-100 rounded-sm px-4 w-max cursor-pointer md:mr-2 text-sm md:text-base mb-[10px] mr-1'>
                     {sortPrice === 'asc' || sortPrice === '' ? 
                         <BsSortNumericDown className='text-lg md:text-2xl'/> :
                         <BsSortNumericDownAlt className='text-lg md:text-2xl'/>

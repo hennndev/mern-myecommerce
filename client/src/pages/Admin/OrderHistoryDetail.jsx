@@ -41,7 +41,7 @@ const OrderHistoryDetail = () => {
                 <Modal admin>
                     <h1 className='text-center text-xl'>User Info</h1>
                     <div className='mt-3 text-[#444]'>
-                        <img src={isModal.orderBuyer.profileImage.profileImageURL || 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'} alt="image-modal" className='w-[100px] h-[100px] object-contain mb-2'/>
+                        <img src={isModal.orderBuyer.profileImage.profileImageURL || 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'} alt="image-user-profile" className='w-[100px] h-[100px] object-contain mb-2'/>
                         <div className='flex flex-col mb-2'>
                             <p className="mb-1">Username : <span className='font-medium'>{isModal.orderInfo.name}</span></p>
                             <p className="mb-1">User Email : <span className='font-medium'>{isModal.orderInfo.emailActive}</span></p>

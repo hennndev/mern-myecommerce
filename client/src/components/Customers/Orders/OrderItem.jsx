@@ -4,7 +4,7 @@ import OrderProductItem from './OrderProductItem'
 
 const OrderItem = ({order, removeOrder, cancelledOrder, handleReview}) => {
     return (
-        <div className='rounded-sm p-5 shadow-lg space-y-2 text-[#444] relative mb-[30px]' key={order._id}>
+        <div className='rounded-sm p-5 shadow-lg space-y-2 text-[#444] relative mb-[30px]'>
             <div className="flex__between">
                 <h1 className='font-medium'>Order ID: #{order._id.slice(0, 10)}</h1>
                 <p className={`font-medium ${order.orderStatus} ${order.orderStatus !== 'Cancelled' && order.orderStatus !== 'Delivered' && 'animate-pulse'} shadow-lg rounded-sm py-1 px-[10px] absolute -top-3 -right-1 sm:static`}>{order.orderStatus}</p>
